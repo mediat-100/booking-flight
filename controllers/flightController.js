@@ -16,6 +16,7 @@ exports.getFlight = (req, res) => {
 	try {
 		const id = req.params.id * 1;
 		const flight = Flight.find((flight) => flight.id === id);
+
 		if (!flight) throw new Error("Flight Not Found!!");
 
 		return res.status(200).send(flight);
@@ -37,8 +38,9 @@ exports.createFlight = (req, res) => {
 		Flight.push(req.body);
 
 		let newFlight = JSON.stringify(Flight, null, 2);
+        
 		// add new flight to the flight file
-		fs.writeFileSync(`${__dirname}/../models/Flight.json`, newFlight);
+		fs.writeFileSync(`${__dirname}/../models/flight.json`, newFlight);
 
 		return res.status(200).json({
 			status: "success",
@@ -67,7 +69,7 @@ exports.updateFlight = (req, res) => {
 
 		let updateFlight = JSON.stringify(Flight, null, 2);
 		// add new flight to the flight file
-		fs.writeFileSync(`${__dirname}/../models/Flight.json`, updateFlight);
+		fs.writeFileSync(`${__dirname}/../models/flight.json`, updateFlight);
 
 		return res.status(200).json({
 			status: "success",
@@ -85,7 +87,7 @@ exports.deleteFlight = (req, res) => {
 	try {
 		const id = req.params.id * 1;
 		const flight = Flight.find((flight) => flight.id === id);
-		Flight.indexOf;
+
 		if (!flight) throw new Error("Flight Not Found!!");
 
 		const index = Flight.findIndex((object) => {
@@ -96,7 +98,7 @@ exports.deleteFlight = (req, res) => {
 
 		let deleteFlight = JSON.stringify(Flight, null, 2);
 
-		fs.writeFileSync(`${__dirname}/../models/Flight.json`, deleteFlight);
+		fs.writeFileSync(`${__dirname}/../models/flight.json`, deleteFlight);
 
 		return res.status(200).json({
 			status: "success",

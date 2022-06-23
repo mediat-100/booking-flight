@@ -1,7 +1,7 @@
 const express = require("express");
+const controller = require("../controllers/flightController");
 
 const router = express.Router();
-const controller = require("../controllers/flightController");
 
 router.get("/", controller.getAllFlight).get("/:id", controller.getFlight);
 router.post("/", controller.createFlight);
