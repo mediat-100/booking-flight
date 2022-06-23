@@ -1,0 +1,30 @@
+[
+  {
+    "id": 6,
+    "title": "flight to canada",
+    "time": "1pm",
+    "price": 26000,
+    "date": "01-01-2022"
+  },
+  {
+    "id": 3,
+    "title": "flight to Ghana",
+    "time": "3pm",
+    "price": 12000,
+    "date": "29-06-2022"
+  },
+  {
+    "id": 4,
+    "title": "flight to japan",
+    "time": "6pm",
+    "price": 150000,
+    "date": "29-06-2022"
+  },
+  {
+    "id": 1,
+    "title": "flight to namibia",
+    "time": "6pm",
+    "price": 150000,
+    "date": "29-06-2022"
+  }
+]
